@@ -36,7 +36,7 @@ class Publicacion extends React.Component {
 
           const post = this.state.post.map((post, i) => {
               return (
-                      <div class="card blue-grey darken-1" key={i}>
+                      <div class="card blue-grey darken-3" key={i}>
                           <div class="card-content white-text">
                           <span class="card-title"><h5>{post.Titulo}</h5></span>
 
@@ -68,8 +68,7 @@ class Publicacion extends React.Component {
                   <div className={this.props.col}>
                       <Inputs onAddTodo={this.handleAddTodo} ></Inputs>
                       <div class="divider"></div>
-                      <div className="card orange darken-1">
-                      <span class="card-title">Muro</span>
+                      <div className="card blue-grey darken-4">
                           {post}
                       </div>
 

@@ -50,19 +50,13 @@ class Inputs extends React.Component {
         return(
 
 
-            <div className="card-panel teal">
+            <div className="card blue-grey darken-1">
+
             <form onSubmit={this.handleSubmit}>
-              <h5>Transaccion a Realizar</h5>
-              <div>
-                <input
-                  type="text"
-                  name="Titulo"
-                  className="autocomplete"
-                  value={this.state.title}
-                  onChange={this.handleInputChange}
-                  placeholder="Nueva Publicacion"
-                  />
-              </div>
+            <h5> - </h5>
+            <h5>Nueva Publicacion </h5>
+
+
 
               <div>
                 <input
@@ -93,13 +87,14 @@ class Inputs extends React.Component {
                   className="autocomplete"
                   value={this.state.description}
                   onChange={this.handleInputChange}
-                  placeholder="Estado"
+                  placeholder="Estado de Animo"
                   />
               </div>
 
               <button type="submit" className="btn waves-effect waves-light">
-                Save
+                Publicar
               </button>
+              <h5> - </h5>
             </form>
           </div>
 
