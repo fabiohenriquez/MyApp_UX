@@ -63,9 +63,9 @@ class Inputs extends React.Component {
                   type="text"
                   name="Nombre"
                   className="autocomplete"
-                  value={this.state.description}
+                  value= {this.state.description}
                   onChange={this.handleInputChange}
-                  placeholder="Nombre"
+                  placeholder="      Nombre"
                   />
               </div>
 
@@ -76,7 +76,7 @@ class Inputs extends React.Component {
                   className="autocomplete"
                   value={this.state.description}
                   onChange={this.handleInputChange}
-                  placeholder="Cuerpo"
+                  placeholder="      Cuerpo"
                   />
               </div>
 
@@ -87,7 +87,7 @@ class Inputs extends React.Component {
                   className="autocomplete"
                   value={this.state.description}
                   onChange={this.handleInputChange}
-                  placeholder="Estado de Animo"
+                  placeholder="     Estado de Animo"
                   />
               </div>
 

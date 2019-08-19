@@ -3,6 +3,7 @@ import './App.css';
 import Titulo_1 from './components/Titulo_1';
 //import {post} from './post.json'
 import Publicacion from './components/Publicacion';
+import Relleno from './components/Relleno'
 
 class App extends Component{
   render(){
@@ -17,7 +18,11 @@ class App extends Component{
 
 
       <div className="row">
-        <Publicacion col="col s7"/>
+      <Relleno col="col s3"/>
+      <Publicacion col="col s6"/>
+      <Relleno col="col s3"/>
+
+
 
 
 
