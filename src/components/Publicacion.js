@@ -1,15 +1,83 @@
 import React from 'react';
+import {post} from '../post.json'
+import Inputs from './Inputs.js';
+
+
 class Publicacion extends React.Component {
-    render() {
-      return (
-        <nav className="navbar navbar-dark bg-dark">
-              <div className="col s5">
-                <font size="12"> MyBook</font>
-              </div>
-      </nav>
-      );
-    }
+
+  constructor(){
+      super();
+      this.state={
+          post
+      };
+      this.handleAddTodo = this.handleAddTodo.bind(this);
+
+
   }
+/////////////////// -------- LOCAL STORAGE --------------------////////////////
+  handleAddTodo(post) {
+
+
+      var datosJson= JSON.stringify(this.state.post);
+      localStorage.setItem('datosJson ', datosJson );
+
+      this.setState({
+
+
+
+        post: [...this.state.post, post]
+
+      })
+    }
+//////////////////////////-------
+
+      render(){
+
+
+          const post = this.state.post.map((post, i) => {
+              return (
+                      <div class="card blue-grey darken-1" key={i}>
+                          <div class="card-content white-text">
+                          <span class="card-title"><h5>{post.Titulo}</h5></span>
+
+
+                          <div class="card-action">
+                              {post.Nombre}
+                          </div>
+                          <div class="card-action">
+                              {post.Cuerpo}
+                          </div>
+                          <div class="card-action">
+                              {post.Estado}
+                          </div>
+                          </div>
+                      </div>
+
+
+              )
+            })
+
+
+
+
+
+
+          return(
+
+
+                  <div className={this.props.col}>
+                      <Inputs onAddTodo={this.handleAddTodo} ></Inputs>
+                      <div class="divider"></div>
+                      <div className="card orange darken-1">
+                      <span class="card-title">Muro</span>
+                          {post}
+                      </div>
+
+                  </div>
+
+                );
+            }
+        }
 
 
   export default Publicacion
